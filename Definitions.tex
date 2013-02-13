@@ -644,6 +644,7 @@
 \newcommand{\emp}{\mathop{\mathrm{emp}}}
 \newcommand{\core}{\mathop{\mathrm{core}}}
 \newcommand{\co}{\mathop{\mathrm{co}}}
+\newcommand{\tp}{\ensuremath{^T}}
 
 %\newcommand{\ln}{\mathop{\mathrm{ln}}}
 %%%%%%%% Utility functions %%%%%%%%%%%%%%%
@@ -719,10 +720,14 @@
 \newcommand{\valtil}{\tilde{\val}}
 
 \newcommand{\alphavec}{\val}
+\newcommand{\alphabar}{\bar{\alpha}}
+\newcommand{\alphainv}{\alpha ^{-1}}
 \newcommand{\alphavecbar}{\bar{\val}}
 \newcommand{\alphavechat}{\hat{\val}}
 \newcommand{\alphavectil}{\tilde{\val}}
 \newcommand{\betavec}{\vec{\beta}}
+\newcommand{\betabar}{\bar{\beta}}
+\newcommand{\betainv}{\beta ^{-1}}
 \newcommand{\deltavec}{\vec{\delta}}
 \newcommand{\etavec}{\vec{\eta}}
 \newcommand{\phivec}{\vec{\phi}}
@@ -777,7 +782,13 @@
 \newcommand{\expgrad}{{\sf ExpGrad}}
 \newcommand{\smo}{{\sf SMO}}
 \newcommand{\lasvm}{{\sf LaSVM}}
+\newcommand{\svm}{{\sf SVM}}
 \newcommand{\nmf}{{\sf NMF}}
+
+%%%%%%%% Various Packages and Solvers %%%%%%% 
+\newcommand{\gams}{{\sf GAMS }}
+\newcommand{\lp}{ {LP }}
+
 
 \newcommand{\arow}[2]{#1_{#2\cdot}}
 \newcommand{\acol}[2]{#1_{\cdot#2}}
@@ -795,6 +806,7 @@
 \newcommand{\fstar}{f^{\star}}
 \newcommand{\hstar}{h^{\star}}
 \newcommand{\xstar}{x^{\star}}
+\newcommand{\ystar}{y^{\star}}
 \newcommand{\Astar}{A^{\star}}
 \newcommand{\Kstar}{K^{\star}}
 
@@ -810,9 +822,25 @@
 
 % custom commands for color environment
 \newcommand{\cred}[1]{{\color{red} #1}}
+\newcommand{\cblue}[1]{{\color{blue} #1}}
+\newcommand{\cblack}[1]{{\color{black} #1}}
+\newcommand{\cyellow}[1]{{\color{yellow} #1}}
 
 % summation
 \newcommand{\summation}[2]{\ensuremath{\displaystyle\sum\limits_{#1}^{#2}}}
+\newcommand{\product}[2]{\ensuremath{\displaystyle\prod\limits_{#1}^{#2}}}
 
-% custom commands for equations
+% custom commands for text in equations
 \newcommand{\suchthat}{\textrm{s.t.} \quad}
+\newcommand{\otherwise}{~\textrm{otherwise}~}
+\newcommand{\textand}{~\textrm{and}~}
+\newcommand{\td}{~\textrm{d}}
+%\newcommand{\log}{\textrm{log}}
+
+% custom commands for symbols
+\newcommand{\rA}{\ensuremath{\rightarrow}}
+
+% custom commands for reference
+\newcommand{\eqref}[1]{Equation~\ref{#1}}
+\newcommand{\figref}[1]{Figure~\ref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
