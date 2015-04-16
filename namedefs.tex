@@ -1,0 +1,10 @@
+\RequirePackage{color}
+
+\ifdefined\commentenabled
+  \newcommand{\raajay}[1]{{\color{blue}\textit{RV: #1}}}
+  \newcommand{\aditya}[1]{{\color{blue}\textit{AA: #1}}}
+\else
+  \newcommand{\raajay}[1]{}
+  \newcommand{\aditya}[1]{}
+\fi
+
