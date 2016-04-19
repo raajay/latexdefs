@@ -12,3 +12,8 @@
   \newcommand{\ratul}[1]{}
 \fi
 
+\ifdefined\outlineenabled
+  \newcommand{\outline}[1]{{\begin{center}\noindent\color{gray}\textit{\%\% #1}\end{center}}}
+\else
+  \newcommand{\outline}[1]{}
+\fi
