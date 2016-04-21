@@ -1,10 +1,34 @@
 \RequirePackage{enumitem}
-
+%
 \newenvironment{denseitemize}{
 \begin{itemize}[noitemsep, topsep=0pt, leftmargin=1.5em]
 }{\end{itemize}}
-
+%
 \newenvironment{denseenum}{
 \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=1.5em]
 }{\end{enumerate}}
-
+%
+\newcommand{\tightcaption}[1]{%
+  \begin{spacing}{0.85}
+    \caption{#1}
+  \end{spacing}
+}%
+\newcommand{\inlineheading}[1]{%
+  \noindent \textbf{#1:}
+}%
+\newcommand{\minorheading}[1]{%
+  \vspace{0.5\baselineskip}
+  \noindent \textbf{#1}
+  \vspace{0.5\baselineskip}
+}%
+%
+\newenvironment{customlegend}[1][]{%
+  \begingroup
+  \csname pgfplots@init@cleared@structures\endcsname
+  \pgfplotsset{#1}%
+}{%
+  \csname pgfplots@createlegend\endcsname
+  \endgroup
+}%
+%
+\def\addlegendimage{\csname pgfplots@addlegendimage\endcsname}
