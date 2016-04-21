@@ -1,15 +1,16 @@
 \RequirePackage{enumitem}
+\RequirePackage{setspace}
 %
 \newenvironment{denseitemize}{
-\begin{itemize}[noitemsep, topsep=0pt, leftmargin=1.5em]
+\begin{itemize}[noitemsep, topsep=0pt, leftmargin=1.2em]
 }{\end{itemize}}
 %
 \newenvironment{denseenum}{
-\begin{enumerate}[noitemsep, topsep=0pt, leftmargin=1.5em]
+\begin{enumerate}[noitemsep, topsep=0pt, leftmargin=1.2em]
 }{\end{enumerate}}
 %
 \newcommand{\tightcaption}[1]{%
-  \begin{spacing}{0.85}
+  \begin{spacing}{0.5}
     \caption{#1}
   \end{spacing}
 }%
