@@ -1,8 +1,5 @@
-\RequirePackage{changebar}
-\ifdefined\changebarenabled
-  \newcommand{\mycbstart}{\cbstart}
-  \newcommand{\mycbend}{\cbend}
+\ifdefined\changeenabled
+  \newcommand{\changetext}[1]{{\color{blue} #1}}
 \else
-  \newcommand{\mycbstart}{}
-  \newcommand{\mycbend}{}
+  \newcommand{\changetext}[1]{}
 \fi
