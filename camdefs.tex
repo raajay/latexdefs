@@ -1,0 +1,8 @@
+\RequirePackage{changebar}
+\ifdefined\changebarenabled
+  \newcommand{\mycbstart}{\cbstart}
+  \newcommand{\mycbend}{\cbend}
+\else
+  \newcommand{\mycbstart}{}
+  \newcommand{\mycbend}{}
+\fi
