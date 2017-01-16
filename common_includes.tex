@@ -1,15 +1,31 @@
 \usepackage{subfig}
+
+% "\includegraphics" command cribs if you have more than one dot(period) in the filename. Include the "grffile" package in your document to avoid it. Can come in very handy when your image files are auto-generated.
 \usepackage{grffile}
+
+% Required to include graphics in the pdf.
 \usepackage{graphics,graphicx}
-% Math symbols
+
+% Math symbols (to get math with different styles like \mathcal, \mathbb)
 \usepackage{amsmath,amssymb}
+
+% Require this package to introduce colors in table rows and columns
 \usepackage{color, colortbl}
+
+% Table with multiple columns
 \usepackage{multicol}
-% Environment to creating a algorithm.
+
+% Environment to create an algorithm
 \usepackage[]{algorithm2e}
 %
-\usepackage[margin=0.5in]{geometry}
+% \usepackage[margin=0.5in]{geometry}
 % Package to include eps figures in \includegraphics. The eps files are automatically converted to pdf to be used with pdflatex
 \usepackage{epstopdf}
+
 % Tikz is used to draw figures in latex.
 \usepackage{tikz}
+
+% References
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{cleveref}

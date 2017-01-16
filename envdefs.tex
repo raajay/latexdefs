@@ -1,28 +1,40 @@
 \RequirePackage{enumitem}
 \RequirePackage{setspace}
-%
+
+
+% A dense itemize environment
 \newenvironment{denseitemize}{
 \begin{itemize}[noitemsep, topsep=0pt, leftmargin=1.2em]
 }{\end{itemize}}
-%
+
+% A dense enumerate environment
 \newenvironment{denseenum}{
 \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=1.2em]
 }{\end{enumerate}}
-%
-\newcommand{\tightcaption}[1]{%
+
+% A environment for minor headings
+\providecommand{\tightcaption}{}%
+\renewcommand{\tightcaption}[1]{%
   \begin{spacing}{0.5}
     \caption{#1}
   \end{spacing}
 }%
-\newcommand{\inlineheading}[1]{%
+
+% An environment for inline heading
+\providecommand{\inlineheading}{}%
+\renewcommand{\inlineheading}[1]{%
   \vspace{0.5\baselineskip plus 1\baselineskip minus 1\baselineskip} \noindent \textbf{#1:}
 }%
-\newcommand{\minorheading}[1]{%
+
+% Similar to previous
+\providecommand{\minorheading}{}%
+\renewcommand{\minorheading}[1]{%
   \vspace{0.5\baselineskip}
   \noindent \textbf{#1}
   \vspace{0.5\baselineskip}
 }%
-%
+
+% An environment for writing a custom legend using Tikz
 \newenvironment{customlegend}[1][]{%
   \begingroup
   \csname pgfplots@init@cleared@structures\endcsname
@@ -31,8 +43,14 @@
   \csname pgfplots@createlegend\endcsname
   \endgroup
 }%
-%
+
+% A command to change the image in the custom legend.
 \def\addlegendimage{\csname pgfplots@addlegendimage\endcsname}
 
-\newcommand{\secref}[1]{\S\ref{#1}}
-\newcommand{\xref}[1]{\S\ref{#1}}
+% Use the \S symbol for referencing a section in a concise manner
+\providecommand{\secref}{}
+\renewcommand{\secref}[1]{\S\ref{#1}}
+
+% Same as above, just another macro name
+\providecommand{\xref}{}
+\renewcommand{\xref}[1]{\S\ref{#1}}
