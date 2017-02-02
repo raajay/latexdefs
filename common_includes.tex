@@ -1,5 +1,3 @@
-\usepackage{subfig}
-
 % "\includegraphics" command cribs if you have more than one dot(period) in the filename. Include the "grffile" package in your document to avoid it. Can come in very handy when your image files are auto-generated.
 \usepackage{grffile}
 
@@ -16,7 +14,11 @@
 \usepackage{multicol}
 
 % Environment to create an algorithm
-\usepackage[]{algorithm2e}
+\usepackage[linesnumbered, lined, boxed]{algorithm2e}
+\renewcommand{\listalgorithmcfname}{List of Pseudocode}
+\renewcommand{\algorithmcfname}{Pseudocode}
+\renewcommand{\algorithmautorefname}{pseudocode}
+
 %
 % \usepackage[margin=0.5in]{geometry}
 % Package to include eps figures in \includegraphics. The eps files are automatically converted to pdf to be used with pdflatex
@@ -27,5 +29,29 @@
 
 % References
 \usepackage{url}
+
 \usepackage{hyperref}
+
+% automatically figure out the environment
 \usepackage{cleveref}
+\newcommand{\crefrangeconjunction}{--}
+
+% All things caption and sub-caption related
+\usepackage[
+  labelfont=footnotesize,
+  textfont=footnotesize,
+  justification=justified
+]{subcaption}
+\usepackage[
+  labelfont={bf,small},
+  textfont=small,
+  justification=justified,
+  font={stretch=0.85}
+]{caption}
+\captionsetup[subfigure]{subrefformat=simple,labelformat=simple}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+
+\usepackage{xspace}
+
+% Helps in determining size and position of figures
+\usepackage{boxedminipage2e}
