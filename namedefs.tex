@@ -1,4 +1,5 @@
 \RequirePackage{color}
+\RequirePackage{xparse}
 
 %
 \ifdefined\commentenabled
@@ -15,7 +16,21 @@
 \newcommand{\todo}[1]{{\color{red}\textit{TODO: #1}}}
 
 \ifdefined\outlineenabled
-  \newcommand{\outline}[1]{{\noindent\color{gray}\textit{\%\% Outline: #1}}}
+  \newcommand{\outline}[1]{{\noindent\color{gray}\itshape\%\% Outline: #1\upshape}}
 \else
   \newcommand{\outline}[1]{}
 \fi
+
+% \ifdefined\outlineenabled
+%   \NewDocumentCommand{\outline}{+m}{%
+%     {%
+%       \noindent%
+%       \color{gray}%
+%       \itshape%
+%       \%\% Outline: #1%
+%       \upshape%
+%     }%
+%   }%
+% \else
+%   \NewDocumentCommand{\outline}{+m}{}
+% \fi
