@@ -21,6 +21,16 @@
   \newcommand{\outline}[1]{}
 \fi
 
+\newcommand{\draft}[1]{%
+  {%
+    \noindent%
+    \color{gray}%
+    \itshape%
+    \%\% \textbf{Draft}\par #1%
+    \upshape%
+  }%
+}%
+
 % \ifdefined\outlineenabled
 %   \NewDocumentCommand{\outline}{+m}{%
 %     {%
