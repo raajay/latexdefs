@@ -24,8 +24,29 @@
 % Package to include eps figures in \includegraphics. The eps files are automatically converted to pdf to be used with pdflatex
 \usepackage{epstopdf}
 
-% Tikz is used to draw figures in latex.
+% Tikz -- draw figures in latex.
 \usepackage{tikz}
+% common tikz packages
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usetikzlibrary{automata}
+\usetikzlibrary{shapes}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shadows}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{shapes.multipart}
+\usetikzlibrary{fit}
+\usetikzlibrary{patterns}
+
+% pgf plots are for graphs
+\usepackage{pgfplots}
+\usepgfplotslibrary{units}
+
+\makeatletter
+\tikzset{nomorepostaction/.code=\let\tikz@postactions\pfgutil@empty}
+\makeatother
 
 % References
 \usepackage{url}
