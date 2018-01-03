@@ -1,4 +1,6 @@
-% "\includegraphics" command cribs if you have more than one dot(period) in the filename. Include the "grffile" package in your document to avoid it. Can come in very handy when your image files are auto-generated.
+% "\includegraphics" command cribs if you have more than one dot(period) in the
+% filename. Include the "grffile" package in your document to avoid it. Can
+% come in very handy when your image files are auto-generated.
 \usepackage{grffile}
 
 % Required to include graphics in the pdf.
@@ -13,15 +15,48 @@
 % Table with multiple columns
 \usepackage{multicol}
 
+% Advanced macros specification
+\usepackage{xparse}
+
+% References
+\usepackage{url}
+\usepackage{hyperref}
+
+% Automatically figure out the environment
+\usepackage{cleveref}
+\newcommand{\crefrangeconjunction}{--}
+
+% All things caption and sub-caption related
+\usepackage[
+  labelfont=footnotesize,
+  textfont=footnotesize,
+  justification=justified
+]{subcaption}
+
+\usepackage[
+  labelfont={bf,small},
+  textfont=small,
+  justification=justified,
+%%   font={stretch=0.85}
+]{caption}
+
+\captionsetup[subfigure]{subrefformat=simple,labelformat=simple}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+
+%% In order to add spaces after macros
+\usepackage{xspace}
+
+% Helps in determining size and position of figures
+\usepackage{boxedminipage2e}
+
 % Environment to create an algorithm
 \usepackage[linesnumbered, lined, boxed]{algorithm2e}
 \renewcommand{\listalgorithmcfname}{List of Pseudocode}
 \renewcommand{\algorithmcfname}{Pseudocode}
 \renewcommand{\algorithmautorefname}{pseudocode}
 
-%
-% \usepackage[margin=0.5in]{geometry}
-% Package to include eps figures in \includegraphics. The eps files are automatically converted to pdf to be used with pdflatex
+% Package to include eps figures in \includegraphics. The eps files are
+% automatically converted to pdf to be used with pdflatex
 \usepackage{epstopdf}
 
 % Tikz -- draw figures in latex.
@@ -48,34 +83,3 @@
 \tikzset{nomorepostaction/.code=\let\tikz@postactions\pfgutil@empty}
 \makeatother
 
-% References
-\usepackage{url}
-
-\usepackage{hyperref}
-
-% automatically figure out the environment
-\usepackage{cleveref}
-\newcommand{\crefrangeconjunction}{--}
-
-% All things caption and sub-caption related
-\usepackage[
-  labelfont=footnotesize,
-  textfont=footnotesize,
-  justification=justified
-]{subcaption}
-\usepackage[
-  labelfont={bf,small},
-  textfont=small,
-  justification=justified,
-%%   font={stretch=0.85}
-]{caption}
-\captionsetup[subfigure]{subrefformat=simple,labelformat=simple}
-\renewcommand\thesubfigure{(\alph{subfigure})}
-
-\usepackage{xspace}
-
-% Helps in determining size and position of figures
-\usepackage{boxedminipage2e}
-
-% Advanced macros specification
-\usepackage{xparse}
